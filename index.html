@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grudget</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h2>Grudget</h2>
+      <p>Monthly grocery tracker...</p>
+    </header>
+    <section class="section">
+      <div class="section-box">
+        <form class="form">
+          <span>add item</span>
+          <div class="form-field">
+            <label for="name">item name:</label>
+            <input type="text" id="name" placeholder="name" />
+          </div>
+          <div class="form-field">
+            <label for="cost">item cost:</label>
+            <input type="text" id="cost" placeholder="cost" />
+          </div>
+          <div class="form-field">
+            <button>add item</button>
+          </div>
+          <div class="form-field">
+            <p class="error-msg" id="error">&nbsp;</p>
+          </div>
+        </form>
+      </div>
+      <div class="section-box">
+        <div class="canvas"></div>
+      </div>
+    </section>
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-firestore.js"></script>
+    <script src="firebaseConfig.js"></script>
+    <script src="https://d3js.org/d3.v6.js"></script>
+    <script src="index.js"></script>
+    <script src="graph.js"></script>
+  </body>
+</html>
