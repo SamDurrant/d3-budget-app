@@ -32,13 +32,20 @@
         </form>
       </div>
       <div class="section-box">
-        <div class="canvas"></div>
+        <div class="canvas">
+          <div id="tooltip" class="tooltip">
+            <span id="name"></span>
+            <span id="cost"></span>
+            <div>click slice to delete item</div>
+          </div>
+        </div>
       </div>
     </section>
     <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-firestore.js"></script>
     <script src="firebaseConfig.js"></script>
     <script src="https://d3js.org/d3.v6.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-legend/2.25.6/d3-legend.min.js"></script>
     <script src="index.js"></script>
     <script src="graph.js"></script>
   </body>

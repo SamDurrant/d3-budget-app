@@ -29,22 +29,21 @@ header p {
 .section {
   width: 80%;
   max-width: 75rem;
-  margin: 5rem auto 0;
+  margin: 5rem auto 3rem;
   display: grid;
   gap: 1rem;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
 }
 
 .section-box {
   background: #f5fbee;
-
+  padding: 1rem;
   display: grid;
   place-items: center;
 }
 
 .form {
   width: 100%;
-  padding: 1rem 2rem;
 }
 
 .form span {
@@ -99,7 +98,44 @@ header p {
 }
 
 .form button:hover {
-  border: 5px solid #f5fbee;
   color: #f5fbee;
   background: #909834;
+  transform: scale(1.05);
+}
+
+#tooltip {
+  background: #909834;
+  color: #f5fbee;
+  position: absolute;
+  opacity: 0;
+  top: -12px;
+  left: 0;
+  padding: 0.6em 1em;
+  box-shadow: 0 6px 8px rgba(52, 73, 94, 0.2), 0 1px 1px rgba(52, 73, 94, 0.1);
+  z-index: 10;
+  transition: all 0.2s ease-out;
+  pointer-events: none;
+}
+
+.tooltip:before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 12px;
+  height: 12px;
+  background: #909834;
+  border-top-color: transparent;
+  border-left-color: transparent;
+  transform: translate(-50%, 50%) rotate(45deg);
+  transform-origin: center center;
+  z-index: 10;
+}
+
+#tooltip p {
+  line-height: 1.5;
+}
+
+#tooltip div {
+  font-size: 0.7rem;
 }
